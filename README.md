@@ -26,41 +26,36 @@
 
 ## 📱 Screenshots
 
-<div align="center">
-  <img src="my-app/assets/images/icon.png" alt="App Icon" width="150"/>
-  <br/>
-  <em>App Icon</em>
-</div>
-
-
-<div align="center">
-  <img src="Screenshots/main.jpg" alt="main image" width="150"/>
-  <br/>
-  <em>App Icon</em>
-</div>
-
-<div align="center">
-  <img src="Screenshots/cards.jpg" alt="cards image" width="150"/>
-  <br/>
-  <em>App Icon</em>
-</div>
-
-<div align="center">
-  <img src="Screenshots/cardDetails.jpg" alt="card details image" width="150"/>
-  <br/>
-  <em>App Icon</em>
-</div>
-
-<div align="center">
-  <img src="Screenshots/generate.jpg" alt="generate cards image" width="150"/>
-  <br/>
-  <em>App Icon</em>
-</div>
-
-<div align="center">
-  <img src="Screenshots/loading.jpg" alt="loading image" width="150"/>
-  <br/>
-  <em>App Icon</em>
+<div align="center" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <img src="Screenshots/main.jpg" alt="Main Screen" width="150"/>
+    <br/>
+    <em>Main Screen</em>
+  </div>
+  
+  <div style="text-align: center;">
+    <img src="Screenshots/cards.jpg" alt="Cards View" width="150"/>
+    <br/>
+    <em>Cards View</em>
+  </div>
+  
+  <div style="text-align: center;">
+    <img src="Screenshots/cardDetails.jpg" alt="Card Details" width="150"/>
+    <br/>
+    <em>Card Details</em>
+  </div>
+  
+  <div style="text-align: center;">
+    <img src="Screenshots/generate.jpg" alt="Generate Cards" width="150"/>
+    <br/>
+    <em>Generate Cards</em>
+  </div>
+  
+  <div style="text-align: center;">
+    <img src="Screenshots/loading.jpg" alt="Loading Screen" width="150"/>
+    <br/>
+    <em>Loading Screen</em>
+  </div>
 </div>
 
 
