@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "CrackMed",
+    "slug": "crackmed-flashcards",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/crackmed.png",
+    "scheme": "crackmed",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/crackmedT.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#573778"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/crackmedT.png",
+        "backgroundColor": "#573778"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.yahia_anes.myapp"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/crackmed.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
