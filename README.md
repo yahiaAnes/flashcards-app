@@ -13,6 +13,7 @@
 - 📂 Category management and organization
 - ✏️ Flashcard creation and editing
 - 📖 Study mode with intuitive swipe gestures
+- 🤖 **AI-powered flashcard generation from PDF documents**
 - 🎨 Modern UI with Tailwind CSS
 - 🔧 TypeScript for enhanced development experience
 
@@ -23,6 +24,9 @@
 - 🌍 CORS configuration for cross-origin requests
 - ✅ Input validation and error handling
 - 📊 API resources for consistent JSON responses
+- 🤖 **AI service integrations (Gemini)**
+- 📄 **PDF parsing and AI-powered content analysis**
+- 💬 **Real-time streaming chatbot responses**
 
 ## 📱 Screenshots
 
@@ -58,6 +62,14 @@
   </div>
 </div>
 
+## 🤖 AI Features
+
+### 🧠 **AI-Powered Flashcard Generation**
+- **PDF Document Analysis**: Upload any PDF document and automatically generate flashcards
+- **Smart Content Extraction**: AI analyzes the document content and creates relevant questions and answers
+- **AI Provider**: Gemini
+- **Structured Output**: Automatically formats flashcards with proper Q&A structure
+- **Category Organization**: Generated flashcards are automatically organized into categories
 
 ## 🏗️ Project Structure
 
@@ -177,6 +189,9 @@ The Laravel backend provides the following API endpoints:
 - `POST /api/flashcards` - Create a new flashcard
 - `PUT /api/flashcards/{id}` - Update a flashcard
 - `DELETE /api/flashcards/{id}` - Delete a flashcard
+
+### AI Services
+- `POST /api/ai/generate-flashcards` - Generate flashcards from PDF using AI
 
 ## 🛠️ Development
 

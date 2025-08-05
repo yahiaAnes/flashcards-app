@@ -13,72 +13,6 @@ use OpenAI\Laravel\Facades\OpenAI;
 
 use App\Services\GeminiService;
 
-Route::get('/test-gemini', function (GeminiService $gemini) {
-    try {
-        // Test basic text generation
-        $prompt = "Hello! Please introduce yourself and tell me what you can help with.";
-        $response = $gemini->generateContent($prompt);
-        
-        // Test token counting
-        $tokenCount = $gemini->countTokens($prompt);
-        
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Gemini API is working!',
-            'prompt' => $prompt,
-            'response' => $response,
-            'token_count' => $tokenCount,
-            'timestamp' => now()->toDateTimeString()
-        ], 200);
-        
-    } catch (\Exception $e) {
-        return response()->json([
-            'status' => 'error',
-            'message' => 'Gemini API test failed',
-            'error' => $e->getMessage(),
-            'timestamp' => now()->toDateTimeString()
-        ], 500);
-    }
-});
-
-// Updated test route with correct model names
-Route::get('/test-gemini-fixed', function (GeminiService $gemini) {
-    $results = [];
-    
-    // Test with different model names
-    $models = ['gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro'];
-    
-    foreach ($models as $model) {
-        try {
-            $prompt = "what is laravel?";
-            $response = $gemini->generateContent($prompt, $model);
-            
-            $results[$model] = [
-                'status' => 'success',
-                'response' => $response,
-                'length' => strlen($response)
-            ];
-            
-            // If one works, break
-            if (!str_contains($response, 'Error:')) {
-                break;
-            }
-            
-        } catch (\Exception $e) {
-            $results[$model] = [
-                'status' => 'failed',
-                'error' => $e->getMessage()
-            ];
-        }
-    }
-    
-    return response()->json([
-        'results' => $results,
-        'api_key_configured' => config('services.gemini.api_key') ? 'yes' : 'no',
-        'recommendation' => 'Check logs for detailed error messages'
-    ]);
-});
-
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
@@ -90,10 +24,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     });
 
 });
-
-// Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-//     return $request->user();
-// });
 
 
 Route::post("/login",function(Request $request) {
